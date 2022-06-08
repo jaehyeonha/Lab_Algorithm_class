@@ -3,8 +3,6 @@
 #include <algorithm>
 using namespace std;
 
-int w[100010];
-
 int main(){
     int num; 
     int weight;
