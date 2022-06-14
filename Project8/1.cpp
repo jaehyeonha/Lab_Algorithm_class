@@ -39,7 +39,7 @@ void schedule(int n, sequence_of_integer& deadline, sequence_of_integer& J) {
 int main() {
     int n;
     cin >> n;
-    sequence_of_integer J(n + 1);
+    sequence_of_integer J;
     sequence_of_integer deadline(n + 1);
     sequence_of_integer profit(n + 1);
 

@@ -29,7 +29,6 @@ void tour1(int k, int v, int s, int n, int m, int& count, matrix_t& graph, vecto
 	if (k == n * m) {
 		for (int i = 0; i < graph[v].size(); i++) {
 			if (s == graph[v][i]) {
-				mark[v] = k;
 				count++;
 			}
 		}
@@ -47,7 +46,6 @@ void tour1(int k, int v, int s, int n, int m, int& count, matrix_t& graph, vecto
 
 void tour2(int k, int v, int s, int n, int m, int& count, matrix_t& graph, vector<int>& mark) {
 	if (k == n * m) {
-		mark[v] = k;
 		count++;
 	}
 	else {

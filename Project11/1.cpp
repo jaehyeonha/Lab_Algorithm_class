@@ -39,8 +39,8 @@ float bound(node_pointer u, int n) {
 		return 0;
     }
 	else {
-		result = u->profit;
 		j = u->level + 1;
+		result = u->profit;
 		totweight = u->weight;
 
 		while (j <= n && totweight + items[j].weight <= W) {
@@ -48,10 +48,8 @@ float bound(node_pointer u, int n) {
 			result += items[j].profit;
 			j++;
 		}
-
-		k = j;
-		if (k <= n) {
-			result += (W - totweight) * ((float)items[k].profit / items[k].weight);
+		if (j <= n) {
+			result += (W - totweight) * ((float)items[j].profit / items[j].weight);
 		}
         
 		return result;

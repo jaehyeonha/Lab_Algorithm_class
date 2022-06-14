@@ -38,9 +38,8 @@ bool promising(int i, int n, int profit, int weight) {
 			bound += items[j].profit;
 			j++;
 		}
-		k = j;
-		if (k <= n) {
-			bound += (W - totweight) * ((float)items[k].profit / items[k].weight);
+		if (j <= n) {
+			bound += (W - totweight) * ((float)items[j].profit / items[j].weight);
 		}
 		cout << i << " " << weight << " " << profit << " " << bound << " " << maxprofit << endl;
 		return bound > maxprofit;
